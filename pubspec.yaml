@@ -1,0 +1,72 @@
+name: flight_booking_app
+description: A Flutter app for flight booking with Firebase
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase Core (ต้องมีทุกโปรเจกต์)
+  firebase_core: ^4.1.0   # ✅ ใช้เวอร์ชันล่าสุดเสถียร
+
+  # Firebase Authentication (เข้าสู่ระบบ / สมัครสมาชิก)
+  firebase_auth: ^6.0.2   # ✅ ปรับตาม firebase_core
+
+  # Cloud Firestore (เก็บเที่ยวบิน/การจอง)
+  cloud_firestore: ^6.0.1 # ✅ ปรับตาม firebase_core
+
+  # ใช้สำหรับแสดงผล วันที่/เวลา
+  intl: ^0.20.0
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+  # ✅ เพิ่ม Lottie สำหรับแอนิเมชัน
+  lottie: ^3.1.2
+
+  # ✅ เพิ่ม Marquee สำหรับข้อความวิ่ง
+  marquee: ^2.2.3
+
+  # ✅ เพิ่ม SmoothPageIndicator สำหรับ banner slider
+  smooth_page_indicator: ^1.2.0
+
+  # ✅ เพิ่ม Carousel Slider สำหรับ carousel
+  carousel_slider: ^5.1.1
+
+  #qr code
+  qr_flutter: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/airplane1.json 
+    - assets/tokyo.jpg
+    - assets/seoul.jpg
+    - assets/rome.jpg
+    - assets/paris.jpg
+    - assets/newyork.jpg
+    - assets/bangkok.jpg
+    - assets/london1.jpg
+    - assets/tokyo2.jpg
+    - assets/seoul2.jpg
+    - assets/rome2.jpg
+    - assets/paris2.jpg
+    - assets/newyork2.jpg
+    - assets/bangkok2.jpg
+    - assets/london2.jpg
+    - assets/summer_banner.jpg
+    - assets/discount_banner.jpg
+
+      # ✅ Lottie animation
+    # ถ้ามีไฟล์รูป/แอนิเมชันอื่น ให้เพิ่มไว้ที่นี่
