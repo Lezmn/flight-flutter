@@ -1,12 +1,16 @@
 import 'package:http/http.dart' as http;
 import 'ticket.dart';
 import 'dart:convert';
+import 'env.dart';
 
 class Apiservices {
   // Add your API service methods here
 
   Future<Ticket> requestActivity(String Depart, String Arrive) async {
-    String url = 'https://api.aviationstack.com/v1/flights?access_key=7acc79d5cb2c24abf66a3b4a985d9949&dep_iata=$Depart&arr_iata=$Arrive&limit=15';
+    if (Env.aviationstackApiKey.isEmpty) {
+      throw Exception('Missing AVIATIONSTACK_API_KEY: run with --dart-define-from-file=env.json');
+    }
+    String url = 'https://api.aviationstack.com/v1/flights?access_key=${Env.aviationstackApiKey}&dep_iata=$Depart&arr_iata=$Arrive&limit=15';
     try {
       return await http
         .get(Uri.parse(url))
